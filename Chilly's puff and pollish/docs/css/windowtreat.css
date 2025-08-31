@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+body.neon-theme {
+	background: linear-gradient(135deg, #0c0c0c, #181818);
+	font-family: 'Orbitron', sans-serif;
+	color: #00cfff;
+	margin: 0;
+	padding: 0;
+	animation: glowPulseSky 8s infinite alternate;
+}
+
+header {
+	text-align: center;
+	padding: 2rem;
+	background: #111;
+	box-shadow: 0 0 15px #00cfff, 0 0 25px #00cfff;
+}
+
+h1 {
+	color: #00cfff;
+	font-size: 3rem;
+}
+
+.tagline {
+	font-style: italic;
+	color: #ddd;
+}
+
+.back-btn {
+	display: inline-block;
+	margin-top: 1rem;
+	color: #00cfff;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	border: 2px solid #00cfff;
+	border-radius: 5px;
+	transition: 0.3s;
+}
+
+.back-btn:hover {
+	background-color: #00cfff;
+	color: #000;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	padding: 2rem;
+}
+
+.addon-info {
+	display: flex;
+	gap: 4rem;
+	max-width: 1700px;
+	background: #1a1a1a;
+	padding: 3rem 2rem;
+	border-radius: 10px;
+	box-shadow: 0 0 25px #00cfff;
+	align-items: center;
+}
+
+.addon-info img {
+	width: 800px;
+	border-radius: 10px;
+	box-shadow: 0 0 15px #00cfff;
+}
+
+.text h2, .text h3 {
+	margin-top: 0;
+	font-size: 2.2rem;
+}
+
+.text ul {
+	font-size: 1.3rem;
+	margin-bottom: 1.5rem;
+}
+
+.text li {
+	margin-bottom: 0.7rem;
+}
+
+.book-now {
+	margin-top: 1rem;
+	padding: 1rem 2rem;
+	border: none;
+	background: linear-gradient(90deg, #00cfff, #00aaff);
+	color: black;
+	font-size: 1.1rem;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+	box-shadow: 0 0 15px #00cfff;
+}
+
+.book-now:hover {
+	transform: scale(1.05);
+	background: linear-gradient(90deg, #00aaff, #00cfff);
+}
+
+.note {
+	font-size: 1.1rem;
+	color: #ccc;
+}
+
+footer {
+	text-align: center;
+	padding: 1rem;
+	font-size: 0.8rem;
+	background-color: #0f0f0f;
+	color: #666;
+	margin-top: 2rem;
+}
+
+@keyframes glowPulseSky {
+	0% { background-color: #0c0c0c; }
+	100% { background-color: #1a1a1a; }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+body.neon-theme {
+	background: linear-gradient(135deg, #0c0c0c, #181818);
+	font-family: 'Orbitron', sans-serif;
+	color: #00cfff;
+	margin: 0;
+	padding: 0;
+	animation: glowPulseSky 8s infinite alternate;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, li, .tagline, .note, .text, .book-now, .back-btn, .addon-info, .contact, .main, .addon {
+	color: #00cfff !important;
+}
+
+header {
+	text-align: center;
+	padding: 2rem;
+	background: #111;
+	box-shadow: 0 0 15px #00cfff, 0 0 25px #00cfff;
+}
+
+h1 {
+	color: #00cfff;
+	font-size: 3rem;
+}
+
+.tagline {
+	font-style: italic;
+	color: #ddd;
+}
+
+.back-btn {
+	display: inline-block;
+	margin-top: 1rem;
+	color: #00cfff;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	border: 2px solid #00cfff;
+	border-radius: 5px;
+	transition: 0.3s;
+}
+
+.back-btn:hover {
+	background-color: #00cfff;
+	color: #000;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	padding: 2rem;
+}
+
+.addon-info {
+	display: flex;
+	gap: 4rem;
+	max-width: 1700px;
+	background: #1a1a1a;
+	padding: 3rem 2rem;
+	border-radius: 10px;
+	box-shadow: 0 0 25px #00cfff;
+	align-items: center;
+}
+
+.addon-info img {
+	width: 800px;
+	border-radius: 10px;
+	box-shadow: 0 0 15px #00cfff;
+}
+
+.text h2, .text h3 {
+	margin-top: 0;
+	font-size: 2.2rem;
+}
+
+.text ul {
+	font-size: 1.3rem;
+	margin-bottom: 1.5rem;
+}
+
+.text li {
+	margin-bottom: 0.7rem;
+}
+
+.book-now {
+	margin-top: 1rem;
+	padding: 1rem 2rem;
+	border: none;
+	background: linear-gradient(90deg, #00cfff, #00aaff);
+	color: black;
+	font-size: 1.1rem;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+	box-shadow: 0 0 15px #00cfff;
+}
+
+.book-now:hover {
+	transform: scale(1.05);
+	background: linear-gradient(90deg, #00aaff, #00cfff);
+}
+
+.note {
+	font-size: 1.1rem;
+	color: #ccc;
+}
+
+footer {
+	text-align: center;
+	padding: 1rem;
+	font-size: 0.8rem;
+	background-color: #0f0f0f;
+	color: #666;
+	margin-top: 2rem;
+}
+
+@keyframes glowPulseSky {
+	0% { background-color: #0c0c0c; }
+	100% { background-color: #1a1a1a; }
+}
