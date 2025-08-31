@@ -1,0 +1,13 @@
+// Chilly's Puff and Polish - Simple Node.js server for local testing
+// (Not used for GitHub Pages, but useful for local development)
+
+const express = require('express');
+const path = require('path');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(express.static(path.join(__dirname)));
+
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gold – Deep Clean + Paint Prep | Chilly's Puff and Polish</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/gold.css" />
+</head>
+<body>
+<header>
+  <h1>🥇 Gold – Deep Clean + Paint Prep</h1>
+</header>
+
+<div class="hero">
+  Next-level shine & paint perfection
+</div>
+
+<section class="details">
+  <h3>Prices</h3>
+  <p>Coupes/Sedans: $400<br />Crossovers/Hatchbacks: $475<br />Pickups/Vans/SUVs: $550</p>
+
+  <h3>Included Services</h3>
+  <ul>
+    <li>Full exterior wash & dry</li>
+    <li>Clay bar treatment</li>
+    <li>Interior vacuum & shampoo</li>
+    <li>Paint correction prep</li>
+    <li>Window cleaning inside & out</li>
+  </ul>
+</section>
+
+<section class="contact">
+  <h2>📞 Book Your Detail Today</h2>
+  <p><strong>Call, Text: </strong><a href="tel:7017308443">(701) 730-8443</a></p>
+  <p><strong>or</strong></p>
+  <p>
+    <a href="mailto:chillyspuffandpolish@gmail.com?subject=Gold Detail Inquiry&body=Hey Chilly, I would like to book a Gold service. Please let me know your availability. Thanks!"
+      style="color:#ffd700; font-weight:bold; text-decoration:none;">📧 Email Chilly</a>
+  </p>
+  <p class="member-announcement">Member Discounts Coming Soon!!!</p>
+   <p>🟣 Tier 1: Basic Buff
+$20/month<br>
+
+10% off all details<br>
+
+Priority booking<br>
+
+Free air freshener every visit</p>
+
+<p>🔵 Tier 2: Gloss Boss
+$40/month<br>
+
+15% off all services<br>
+
+1 free bronze detail every 3 months<br>
+
+Free glass treatment or tire shine each visit</p>
+
+<p>🔴 Tier 3: Chilly’s Elite
+$75/month<br>
+
+20% off all services<br>
+
+1 free equivalent detail every 3 months<br>
+
+Free glass treatment or tire shine each visit<br>
+
+Free windshield rain repellent forever</p>
+  <p><strong>Instagram:</strong> <a href="https://instagram.com/chillyspuffandpolish" target="_blank">Chilly's Puff And Polish</a></p>
+  <p><strong>Facebook:</strong> <a href="https://www.facebook.com/ChillysPuffAndPolish" target="_blank">Chilly's Puff and Polish</a></p>
+  <p><strong>Location:</strong> West Fargo, ND</p>
+</section>
+
+<div class="back">
+  <a href="index.html">← Back to Home</a>
+</div>
+<div class="scroll-down" id="scrollDownArrow">⬇</div>
+<script>
+  const scrollArrow = document.getElementById('scrollDownArrow');
+  if (!scrollArrow) console.error('Scroll arrow not found!');
+
+  window.addEventListener('scroll', () => {
+    console.log('Scroll Y:', window.scrollY);
+    if (window.scrollY > 10) {
+      scrollArrow.classList.add('hidden');
+    } else {
+      scrollArrow.classList.remove('hidden');
+    }
+  });
+
+  // Initial check on page load
+  if (window.scrollY > 10) {
+    scrollArrow.classList.add('hidden');
+  }
+</script>
+
+</body>
+</html>
