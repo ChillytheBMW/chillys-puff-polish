@@ -1,0 +1,566 @@
+<!-- Main HTML file. Move your cleaned and ready HTML here. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chilly's Puff and Polish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="docs/css/index.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #111;
+      color: #eee;
+      line-height: 1.6;
+      height: 200vh;
+    }
+
+    header {
+      background: linear-gradient(to right, #1f1f1f, #2c2c2c);
+      padding: 2rem;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #00ffff;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    /* Winter Special Button */
+    .package.winter-special {
+    color: #00f0ff;
+    background: #003f4d;
+    border: 2px solid #00f0ff;
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #00b8d4;
+    transition: all 0.3s ease;
+    }
+
+    .package.winter-special a {
+    background: linear-gradient(135deg, #00f0ff, #00b8d4);
+    color: #111;
+    box-shadow: 0 0 10px #00f0ff;
+    font-weight: 700;
+    }
+
+    .package.winter-special a:hover {
+    background: linear-gradient(135deg, #00b8d4, #00f0ff);
+    box-shadow: 0 0 25px #00f0ff, 0 0 60px #00b8d4;
+    color: #000;
+    }
+
+    .package.winter-special h3 {
+    text-shadow: 0 0 10px #00e5ff;
+    font-weight: 900;
+    }
+    .package.winter-special {
+      background: linear-gradient(135deg, #00f0ff, #00b8d4);
+      color: #111;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 40px rgba(0, 184, 212, 0.3);
+      text-align: center;
+    }
+
+
+
+    .email-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #505050;
+      color: #00ffff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .email-btn:hover {
+      background-color: #505050;
+      transform: scale(1.05);
+    }
+
+    /* Bronze Button */
+    .package.bronze a {
+      background: linear-gradient(135deg, #cd7f32, #9c5b24);
+      color: #fff;
+      box-shadow: 0 0 15px rgba(205, 127, 50, 0.6), 0 0 30px rgba(205, 127, 50, 0.3);
+    }
+
+    .package.bronze a:hover {
+      background: linear-gradient(135deg, #d89b5a, #b3743a);
+      box-shadow: 0 0 25px rgba(205, 127, 50, 1), 0 0 60px rgba(205, 127, 50, 0.6);
+    }
+
+    .package.bronze {
+      color: #cd7f32;
+    }
+
+    /* Silver Button */
+    .package.silver a {
+      background: linear-gradient(135deg, #c0c0c0, #aaaaaa);
+      color: #111;
+      box-shadow: 0 0 15px rgba(192, 192, 192, 0.6), 0 0 30px rgba(192, 192, 192, 0.3);
+    }
+
+    .package.silver a:hover {
+      background: linear-gradient(135deg, #d0d0d0, #bbbbbb);
+      box-shadow: 0 0 25px rgba(192, 192, 192, 1), 0 0 60px rgba(192, 192, 192, 0.6);
+    }
+
+    .package.silver {
+      color: #c0c0c0;
+    }
+
+    /* Gold Button */
+    .package.gold a {
+      background: linear-gradient(135deg, #ffd700, #ffb700);
+      color: #111;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.3);
+    }
+
+    .package.gold a:hover {
+      background: linear-gradient(135deg, #ffe34a, #ffc700);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 215, 0, 0.6);
+    }
+
+    .package.gold {
+      color: #ffd700;
+    }
+
+    /* Premium Button */
+    .package.premium a {
+      background: linear-gradient(135deg, #ff4500, #ff6347);
+      color: #fff;
+      box-shadow: 0 0 15px rgba(255, 69, 0, 0.6), 0 0 30px rgba(255, 69, 0, 0.3);
+    }
+
+    .package.premium a:hover {
+      background: linear-gradient(135deg, #ff6347, #ff7f50);
+      box-shadow: 0 0 25px rgba(255, 69, 0, 1), 0 0 60px rgba(255, 68, 0, 0.884);
+    }
+
+    .package.premium {
+      color: #ff4500;
+    }
+
+    .scroll-down {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      cursor: pointer;
+      animation: bounce 1.5s infinite;
+      transition: opacity 0.3s ease;
+      font-size: 2.5rem;
+      color: white;
+      opacity: 1;
+    }
+
+    .scroll-down.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(10px);
+      }
+    }
+
+    @keyframes pulseGlow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.1);
+      }
+
+      50% {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    @keyframes swirl {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .hero {
+      background: url('Images/automotive-detailer-washing-away-smart-600nw-2287564871.webp') no-repeat center center/cover;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      z-index: 2;
+      position: relative;
+    }
+
+    .packages {
+      padding: 4rem 2rem;
+      background: #1a1a1a;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .package {
+      background: #222;
+      border: 1px solid #333;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    .package h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .package a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #00ffff;
+      color: #111;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+
+    .package a:hover {
+      background-color: #00cccc;
+    }
+
+    .addons {
+      padding: 4rem 2rem;
+      background: #1a1a1a;
+    }
+
+    .addons h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #00ffff;
+    }
+
+    .addon-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .addon {
+      background: #222;
+      padding: 1.5rem;
+      border-radius: 8px;
+      width: 250px;
+      text-align: center;
+      border: 1px solid #333;
+    }
+
+    .addon p {
+      color: #ccc;
+    }
+
+    /* Special Offer Section Styling */
+    .special-offer {
+      margin: 2rem auto 0 auto;
+      max-width: 600px;
+      background: linear-gradient(90deg, #00fff7 0%, #00cfff 100%);
+      color: #111;
+      border-radius: 12px;
+      box-shadow: 0 0 30px #00fff7, 0 0 10px #00cfff;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .special-offer strong {
+      color: #ff0080;
+      text-shadow: 0 0 8px #fff, 0 0 2px #ff0080;
+    }
+
+    /* Add-on button theme colors */
+    .addon-btn.engine {
+      color: #ff0000;
+    }
+
+    .addon-btn.pet {
+      color: #ff69b4;
+    }
+
+    .addon-btn.ozone {
+      color: #bf5c00;
+    }
+
+    .addon-btn.leather {
+      color: #f4c38e;
+    }
+
+    .addon-btn.headlight {
+      color: #F9FF00;
+    }
+
+    .addon-btn.rain {
+      color: #00cfff;
+    }
+
+    .contact {
+      padding: 4rem 2rem;
+      background: #1a1a1a;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #00ffff;
+      margin-bottom: 1rem;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      color: #ffffff;
+    }
+
+    .contact a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .note {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: #888;
+      font-style: italic;
+    }
+
+    footer {
+      padding: 2rem;
+      background: #111;
+      text-align: center;
+      color: #777;
+    }
+
+    /* Skeuomorphic Soap Confetti Button Styles */
+    .confetti-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: linear-gradient(145deg, #ccc, #fff);
+      border: none;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      box-shadow: 5px 5px 15px #0a0a0a, -5px -5px 15px #2a2a2a;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      z-index: 10000;
+      color: #444;
+    }
+
+    .confetti-button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Confetti Soap Emoji */
+    .confetti-emoji {
+      position: fixed;
+      font-size: 5rem;
+      pointer-events: none;
+      z-index: 9999;
+      animation: fall 5s linear forwards;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Chilly's Puff and Polish</h1>
+    <p>Premium Auto Detailing for the Passionate Driver</p>
+  </header>
+
+  <section class="hero">
+    <h2><strong>GRAND OPENING SALE! 50% OFF EVERYTHING<br /> (valid thru 10/31/2025)</strong></h2>
+  </section>
+  
+  <section class="packages">
+    <div class="package bronze">
+      <h3>🥉 Bronze – Basic Detail</h3>
+      <a href="docs/bronze.html">View Package</a>
+    </div>
+    <div class="package silver">
+      <h3>🥈 Silver – Enhanced Interior & Exterior</h3>
+      <a href="docs/silver.html">View Package</a>
+    </div>
+    <div class="package gold">
+      <h3>🥇 Gold – Deep Clean + Paint Prep</h3>
+      <a href="docs/gold.html">View Package</a>
+    </div>
+    <div class="package special">
+      <h3>💎 Chilly's Special – Chilly's Touch to Ceramic Coating</h3>
+      <a href="docs/chillyspecial.html">View Package</a>
+    </div>
+  </section>
+  <div class="scroll-down" id="scrollDownArrow">⬇</div>
+
+  <section class="addons">
+    <h2>🧼 Add-Ons</h2>
+    <div class="addon-list">
+
+      <div class="addon">
+        <h3>Pet Hair Removal</h3>
+        <a href="docs/pethair.html" class="email-btn addon-btn pet">View Add-On</a>
+      </div>
+
+      <div class="addon">
+        <h3>Headlight Restoration</h3>
+        <a href="docs/headlightresto.html" class="email-btn addon-btn headlight">View Add-On</a>
+      </div>
+
+      <div class="addon">
+        <h3>Engine Bay Detail</h3>
+        <a href="docs/enginebay.html" class="email-btn addon-btn engine">View Add-On</a>
+      </div>
+
+      <div class="addon">
+        <h3>Ozone Odor Treatment</h3>
+        <a href="docs/odoban.html" class="email-btn addon-btn ozone">View Add-On</a>
+      </div>
+
+      <div class="addon">
+        <h3>Rain-Repellent Window Treatment</h3>
+        <a href="docs/windowtreat.html" class="email-btn addon-btn rain">View Add-On</a>
+      </div>
+
+      <div class="addon">
+        <h3>Leather Conditioning</h3>
+        <a href="docs/leathercond.html" class="email-btn addon-btn leather">View Add-On</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="special-offer">
+    <p><strong>Special Offer:</strong> Get 50% off any add-on when booked with a package!</p>
+  </section>
+
+  <section class="contact">
+    <h2>📞 Book Your Detail Today</h2>
+    <p><strong>Call, Text </strong> <a href="tel:7017308443">(701) 730-8443</a></p>
+    <p><strong>or</strong></p>
+    <a href="mailto:chillyspuffandpolish@gmail.com?subject=Detailing Inquiry&body=Hey Chilly, I wanna get my ride cleaned up right!"
+      class="email-btn">
+      <span>📧 Email Chilly</span>
+    </a>
+    <p><strong>Instagram:</strong><a href="https://instagram.com/chillyspuffandpolish" target="_blank"> Chilly's
+        Puff And Polish</a></p>
+    <p><strong>Facebook:</strong> <a href="https://www.facebook.com/ChillysPuffAndPolish"
+        target="_blank">Chilly's Puff and Polish</a></p>
+    <p><strong>Location:</strong> West Fargo, ND</p>
+    <p class="note">* Prices may vary based on vehicle size and condition. *</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Chilly's Puff and Polish. All rights reserved.</p>
+  </footer>
+
+  <button class="confetti-button" onclick="launchConfetti()">🧼 Wash Time!</button>
+
+  <script>
+    const scrollArrow = document.getElementById('scrollDownArrow');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        scrollArrow.classList.add('hidden');
+      } else {
+        scrollArrow.classList.remove('hidden');
+      }
+    });
+
+    function launchConfetti() {
+      for (let i = 0; i < 200; i++) {
+        const emoji = document.createElement('div');
+        emoji.classList.add('confetti-emoji');
+        emoji.style.left = Math.random() * 100 + 'vw';
+        emoji.style.top = '-2rem';
+        emoji.style.animationDelay = (Math.random() * 5) + 's';
+        emoji.innerText = '🧼';
+
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+          emoji.remove();
+        }, 13000); // 8s animation + 5s max delay buffer
+      }
+    }
+  </script>
+</body>
+
+</html>
