@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rain Repellent | Chilly's Puff and Polish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/www/css/windowtreat.css" />
+</head>
+<body class="rain-theme">
+  <header>
+    <h1>🌧️ Rain Repellent Window Treatment</h1>
+    <p class="tagline">Rain go bye-bye. You see the road, not streaky bullshit.</p>
+    <a class="back-btn" href="index.html">← Back to Packages</a>
+  </header>
+
+  <main>
+    <section class="addon-info">
+      <div class="image-label-container">
+  <img src="../Images/Before-after-effect-Rain-repellent-1-1024x574.jpg" alt="Rain Beading Off Windshield" />
+        <span class="img-label before-label">Before</span>
+        <span class="img-label after-label">After</span>
+      </div>
+      <div class="text">
+        <h2>What’s Included:</h2>
+        <ul>
+          <li>Deep glass clean & prep</li>
+          <li>Premium hydrophobic coating applied to all exterior glass</li>
+          <li>Wiper-safe, streak-free, long-lasting up to 2–3 months</li>
+        </ul>
+        <h3>💲 Cost: 40$–60$ for windshield only, $60–80$ for all glass. (Mirrors included)</h3>
+        <p class="note">Shit just slides off like your ex’s excuses.</p>
+        <button class="book-now" onclick="window.location.href='mailto:chillyspuffandpolish@gmail.com'">Book This Add-On</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chilly's Puff and Polish 🌧️🚿</p>
+  </footer>
+
+  <!-- 💡 Glow Trigger Script -->
+  <script>
+    document.addEventListener('mousemove', function(e) {
+      const labels = document.querySelectorAll('.img-label');
+
+      labels.forEach(label => {
+        const rect = label.getBoundingClientRect();
+        const dx = e.clientX - (rect.left + rect.width / 2);
+        const dy = e.clientY - (rect.top + rect.height / 2);
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance <= 200) {
+          label.classList.add('glow');
+        } else {
+          label.classList.remove('glow');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

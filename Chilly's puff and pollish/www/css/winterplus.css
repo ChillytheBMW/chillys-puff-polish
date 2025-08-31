@@ -1,0 +1,202 @@
+/* Base & Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent; /* Disable tap highlight on iOS */
+}
+
+body {
+	font-family: 'Orbitron', sans-serif;
+	background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+	color: #e0f7fa;
+	line-height: 1.7;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2.5rem 1rem 4rem; /* extra bottom padding for iOS safe area */
+	scroll-padding-bottom: 4rem;
+}
+
+header {
+	text-align: center;
+	margin-bottom: 2rem;
+	padding: 0 1rem;
+}
+
+header h1 {
+	color: #00fff7;
+	font-size: 2.8rem;
+	margin-bottom: 0.25rem;
+	letter-spacing: 2px;
+	text-shadow: 0 0 18px #00fff7, 0 0 32px #0ff, 0 2px 12px #90caf9;
+	word-break: break-word;
+}
+
+header p {
+	color: #e0f7fa;
+	font-size: 1.15rem;
+	margin-bottom: 0.5rem;
+	text-shadow: 0 0 8px #00fff7;
+	word-break: break-word;
+}
+
+/* Winter Section Styling */
+.winter-section {
+	background: linear-gradient(120deg, rgba(0,255,255,0.12) 0%, rgba(44,83,100,0.95) 100%), url('../Images/winterplus-bg.webp');
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: lighten;
+	border-radius: 24px;
+	padding: 3rem 2.5rem 2.5rem 2.5rem;
+	max-width: 900px;
+	width: 100%;
+	box-shadow: 0 0 60px #00fff7, 0 4px 32px rgba(0,255,255,0.10);
+	color: #00fff7;
+	text-align: center;
+	border: 2px solid #00fff7;
+	position: relative;
+}
+
+.section-title {
+	font-size: 2.2rem;
+	font-weight: 900;
+	margin-bottom: 0.3rem;
+	color: #00fff7;
+	text-shadow: 0 0 18px #00fff7, 0 2px 8px #bbdefb;
+	word-break: break-word;
+}
+
+.section-subtitle {
+	font-size: 1.1rem;
+	margin-bottom: 2rem;
+	color: #e0f7fa;
+	font-weight: 500;
+	text-shadow: 0 0 8px #00fff7;
+	word-break: break-word;
+}
+
+.services-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2.2rem;
+	text-align: left;
+}
+
+.service-card {
+	background: linear-gradient(120deg, #232526 0%, #414345 100%);
+	border-radius: 18px;
+	padding: 2.2rem 1.7rem 1.7rem 1.7rem;
+	box-shadow: 0 0 24px #00fff7, 0 4px 18px rgba(0,255,255,0.10);
+	color: #e0f7fa;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+	cursor: pointer;
+	border: 2px solid #00fff7;
+	outline: none;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	text-decoration: none; /* remove underline */
+}
+
+/* Make whole card tappable with keyboard focus and hover */
+.service-card:hover,
+.service-card:focus-visible {
+	transform: translateY(-6px) scale(1.04);
+	box-shadow: 0 0 48px #00fff7, 0 8px 32px rgba(0,255,255,0.18);
+	background: linear-gradient(120deg, #00fff7 0%, #232526 100%);
+	border-color: #fff;
+	outline: none;
+}
+
+.service-card h3 {
+	font-size: 1.3rem;
+	margin-bottom: 0.7rem;
+	color: #00fff7;
+	text-shadow: 0 0 12px #00fff7, 0 2px 6px #bbdefb;
+	user-select: none;
+}
+
+.service-card ul {
+	list-style-type: none;
+	margin-bottom: 1rem;
+	padding-left: 0;
+	flex-grow: 1;
+}
+
+.service-card ul li {
+	margin-bottom: 0.5rem;
+	font-size: 1.05rem;
+	color: #e0f7fa;
+	padding-left: 0.8rem;
+	position: relative;
+	text-shadow: 0 0 8px #00fff7;
+	user-select: text;
+}
+
+.service-card ul li:before {
+	content: "◆ ";
+	color: #00fff7;
+	font-size: 1.1em;
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-shadow: 0 0 8px #00fff7;
+}
+
+.price {
+	font-weight: 700;
+	font-size: 1.1rem;
+	color: #ff4081;
+	text-align: right;
+	margin-top: auto;
+	margin-bottom: 0.2rem;
+	text-shadow: 0 0 8px #ff4081;
+	user-select: none;
+}
+
+footer {
+	margin-top: 3rem;
+	text-align: center;
+	font-size: 0.95rem;
+	color: #00fff7;
+	user-select: none;
+	text-shadow: 0 0 8px #00fff7;
+	padding: 0 1rem;
+	word-break: break-word;
+}
+
+/* Link back to main site */
+nav {
+	margin-top: 2rem;
+	text-align: center;
+	width: 100%;
+	max-width: 900px;
+	padding: 0 1rem;
+}
+
+.back-link {
+	display: inline-block;
+	font-weight: 700;
+	color: #00fff7;
+	text-decoration: none;
+	border: 2px solid #00fff7;
+	padding: 0.7rem 1.5rem;
+	border-radius: 18px;
+	background: linear-gradient(90deg, #232526 0%, #414345 100%);
+	box-shadow: 0 0 16px #00fff7;
+	transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+	user-select: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+	background: linear-gradient(90deg, #00fff7 0%, #232526 100%);
+	color: #232526;
+	border-color: #fff;
+	box-shadow: 0 0 32px #00fff7;
+	outline: none;
+}
+/* CSS for winterplus.html */
