@@ -1,0 +1,48 @@
+/* CSS for winterchillyspecial.html */
+
+/* Base & Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+  color: #e0f7fa;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem;
+}
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+header h1 {
+  color: #00fff7;
+  font-size: 2.8rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 18px #00fff7, 0 0 32px #0ff, 0 2px 12px #90caf9;
+}
+header p {
+  color: #e0f7fa;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px #00fff7;
+}
+main.package-details {
+  background: linear-gradient(120deg, rgba(0,255,255,0.12) 0%, rgba(44,83,100,0.95) 100%);
+  border-radius: 24px;
+  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 0 60px #00fff7, 0 4px 32px rgba(0,255,255,0.10);
+  color: #00fff7;
+  text-align: left;
+  border: 2px solid #00fff7;
+  position: relative;
+}
